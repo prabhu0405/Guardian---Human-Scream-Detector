@@ -19,7 +19,7 @@ def extract_mfcc(file_path):
     if len(signal.shape) > 1:
         signal = signal[:, 0]
 
-    mfcc_feat = mfcc(signal, samplerate=rate, numcep=60)
+    mfcc_feat = mfcc(signal, samplerate=rate, numcep=26)
     mfcc_mean = np.mean(mfcc_feat, axis=0)
     return mfcc_mean.reshape(1, -1)
 
