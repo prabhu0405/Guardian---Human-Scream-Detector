@@ -5,6 +5,7 @@ import joblib
 import os
 from tensorflow.keras.models import load_model
 
+
 app = Flask(__name__)
 
 # Load models
@@ -45,3 +46,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
